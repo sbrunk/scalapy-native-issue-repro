@@ -1,5 +1,5 @@
-@main def hello: Unit = 
-  println("Hello world!")
-  println(msg)
+import me.shadaj.scalapy.py
 
-def msg = "I was compiled by Scala 3. :)"
+@py.native trait PyString extends py.Object {
+  def count(subsequence: String): Int = py.native
+}
